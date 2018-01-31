@@ -12,6 +12,7 @@
     "dotenv": "^5.0.0",
     "execa": "^0.9.0",
     "fs-extra": "^5.0.0",
+    "has-git": "^0.0.2",
     "lodash.flatten": "^4.4.0",
     "lodash.set": "^4.3.2",
     "nerf-dart": "^1.0.0",
@@ -22,7 +23,8 @@
     "semver": "^5.5.0"
   },
   "scripts": {
-    "test": "node lib"
+    "test": "node lib",
+    "npm-patch": "bin/npm-patch.js"
   },
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"
