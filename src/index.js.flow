@@ -1,0 +1,44 @@
+// @flow
+declare type PackageJson = {
+  name: string,
+  version: string,
+  publishConfig?: {
+    registry: string
+  },
+  npmPatch?: {
+    skipClean?: string
+  }
+}
+
+declare type PublishedPackageInfo = {
+  'dist-tags': {
+    latest: string
+  }
+}
+
+declare type Registry = string
+declare type AppRoot = string
+
+declare interface PackageConfig {
+  packageJson: PackageJson,
+  publishedPackageInfo?: PublishedPackageInfo,
+  registry: Registry,
+  appRoot: AppRoot
+}
+
+declare type PackageJsonPath = string
+
+declare interface NpmPatchError {
+  code: string,
+  name: string,
+  npmPatch: boolean
+}
+declare module.exports: typeof tryUntil
+declare module.exports: typeof Npm
+declare module.exports: typeof safeDotEnv
+declare module.exports: typeof NpmPatchError
+declare module.exports: typeof getRegistry
+declare module.exports: typeof gitCommit
+declare module.exports: typeof npmPatch
+declare module.exports: typeof setNpmrcToken
+declare module.exports: typeof npmPublish
